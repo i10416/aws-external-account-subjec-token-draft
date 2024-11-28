@@ -1,0 +1,18 @@
+[package]
+name = "external-auth-sandbox"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-config = { version = "1.1",default-features = false, features = ["behavior-version-latest"] }
+aws-sigv4 = {version = "1.2", default-features = false }
+aws-credential-types = {version = "1.2.1",default-features = false }
+http = "1.1"
+url = "2.5"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+percent-encoding = "2.3"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+chrono = "0.4.38"
